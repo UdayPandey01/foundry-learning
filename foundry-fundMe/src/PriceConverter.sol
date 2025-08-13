@@ -7,7 +7,7 @@ import {AggregatorV3Interface} from "lib/chainlink-brownie-contracts/contracts/s
 library PriceConverter{
     function getPrice() public view returns (uint256) {
         //0x694AA1769357215DE4FAC081bf1f309aDC325306
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF);
+        AggregatorV3Interface priceFeed = AggregatorV3Interface(0x694AA1769357215DE4FAC081bf1f309aDC325306);
         (,int256 price,,,) = priceFeed.latestRoundData();
         return uint256(price * 1e18);
     }
